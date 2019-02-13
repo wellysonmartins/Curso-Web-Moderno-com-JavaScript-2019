@@ -2,7 +2,7 @@
 Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Webpack Gulp Banco de Dados e muito mais
 
 ## Conteúdo:
-1.[x] Introdução
+1. [x] Introdução
 2. Configuração do Ambiente
 3. Javascript: Fundamentos
 4. Javascript: Estruturas de Controle
