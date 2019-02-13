@@ -5,7 +5,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 1. Introdução
 - [x] 2. Configuração do Ambiente
 - [x] 3. Javascript: Fundamentos
-- [] 4. Javascript: Estruturas de Controle
+- [ ] 4. Javascript: Estruturas de Controle
 5. Javascript: Função
 6. Javascript: Objeto
 7. Javascript: Array
