@@ -5,10 +5,6 @@ const alunos = [
    { nome: 'Ana', nota: 8.7, bolsista: true }
 ]
 
-console.log(alunos.map(a => a.nota))
-const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual) {
-   console.log(acumulador, atual)
-   return acumulador + atual
-}, 0)
+// Desafio 1: Todos os alunos são bolsista?
 
-console.log(resultado)
+// Desafio 2: Algum aluno é bolsista?
