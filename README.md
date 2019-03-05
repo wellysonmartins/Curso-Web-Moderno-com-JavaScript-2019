@@ -8,7 +8,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 4. Javascript: Estruturas de Controle
 - [x] 5. Javascript: Função
 - [x] 6. Javascript: Objeto
-- [ ] 7. Javascript: Array
+- [x] 7. Javascript: Array
 - [ ] 8. Node
 - [ ] 9. ESNext
 - [ ] 10. Conceitos sobre Web
