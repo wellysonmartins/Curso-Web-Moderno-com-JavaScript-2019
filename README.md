@@ -11,7 +11,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 7. Javascript: Array
 - [x] 8. Node
 - [x] 9. ESNext
-- [ ] 10. Conceitos sobre Web
+- [x] 10. Conceitos sobre Web
 - [ ] 11. HTML
 - [ ] 12. CSS
 - [ ] 13. Integrando HTML, CSS e JS
