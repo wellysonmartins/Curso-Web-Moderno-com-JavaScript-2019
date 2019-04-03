@@ -15,7 +15,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 11. HTML
 - [x] 12. CSS
 - [x] 13. Integrando HTML, CSS e JS
-- [ ] 14. Ajax
+- [x] 14. Ajax
 - [ ] 15. Gulp
 - [ ] 16. Webpack
 - [ ] 17. jQuery
