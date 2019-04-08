@@ -19,7 +19,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 15. Gulp
 - [x] 16. Webpack
 - [ ] 17. jQuery
-- [ ] 18. Bootstrap
+- [x] 18. Bootstrap
 - [ ] 19. Projeto Galeria (Bootstrap/jQuery/Webpack)
 - [ ] 20. React
 - [ ] 21. Projeto Calculadora
