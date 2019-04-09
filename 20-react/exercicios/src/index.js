@@ -1,4 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(<h1>react</h1>, document.getElementById('root'))
+// import BomDia from './componentes/BomDia'
+import Multi, { BoaNoite } from './componentes/Multiplos'
+
+ReactDOM.render(
+   <Fragment>
+      <Multi.BoaTarde nome="Wellyson" />
+      <BoaNoite nome="Mônica" />
+   </Fragment>
+   , document.getElementById('root'))
