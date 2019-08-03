@@ -18,11 +18,11 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 14. Ajax
 - [x] 15. Gulp
 - [x] 16. Webpack
-- [ ] 17. jQuery
+- [x] 17. jQuery
 - [x] 18. Bootstrap
-- [x] 20. React
-- [x] 23. VueJS
-- [x] 24. Projeto VueJS
+- [ ] 20. React
+- [ ] 23. VueJS
+- [ ] 24. Projeto VueJS
 - [ ] 27. Banco Relacional
 - [ ] 28. Banco Não Relacional
 - [ ] 29. Express

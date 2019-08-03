@@ -21,6 +21,28 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alternarDestaque = () => $('#div1').toggleClass('destaque')
+        $('#div1').hover(alternarDestaque)
+        // $('#div1').on('mouseenter mouseleave', alternarDestaque)
+
+        $('#div1').one('mouseenter', e => alert('Aviso IMPORTANTE: Obrigado!!!'))
+        $('#div1').dblclick(e => $('#div1').fadeOut(1000).fadeIn(1000))
+
+        $(window).resize(function(e) {
+            const l = $(window).width()
+            const a = $(window).height()
+            $('#resultado1').html(`Largura: ${l} e Altura: ${a}`)
+            if (l < 1000) {
+                $('#div1').html('2')
+            } else {
+                $('#div1').html('1')
+            }
+        })
+
+        $(':input').select(e => {
+            const inicio = e.target.selectionStart
+            const fim = e.target.selectionEnd
+            $('#resultado2').html(e.target.value.substring(inicio, fim))
+        })
     </script>
 </body>
