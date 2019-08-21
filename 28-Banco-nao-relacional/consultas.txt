@@ -1,0 +1,73 @@
+db.estados.findOne()
+{
+	"_id" : ObjectId("5d5d39a50dbb9e7d08804c7c"),
+	"nome" : "Acre",
+	"sigla" : "AC",
+	"regiao" : "Norte"
+}
+
+db.estados.findOne({sigla: "RJ"})
+{
+	"_id" : ObjectId("5d5d3aaa0dbb9e7d08804c7e"),
+	"nome" : "Rio de Janeiro",
+	"sigla" : "RJ",
+	"regiao" : "Sudeste",
+	"cidades" : [
+		{
+			"nome" : "Niterói",
+			"area" : 133.9,
+			"populacao" : 487562
+		}
+	]
+}
+
+db.estados.find({ $or: [{ sigla: "RJ" }, { sigla: "AC" }] }).pretty()
+{
+	"_id" : ObjectId("5d5d39a50dbb9e7d08804c7c"),
+	"nome" : "Acre",
+	"sigla" : "AC",
+	"regiao" : "Norte"
+}
+{
+	"_id" : ObjectId("5d5d3aaa0dbb9e7d08804c7e"),
+	"nome" : "Rio de Janeiro",
+	"sigla" : "RJ",
+	"regiao" : "Sudeste",
+	"cidades" : [
+		{
+			"nome" : "Niterói",
+			"area" : 133.9,
+			"populacao" : 487562
+		}
+	]
+}
+
+
+db.estados.find({populacao: {$exists: true}})
+{ "_id" : ObjectId("5d5d39ee0dbb9e7d08804c7d"), "nome" : "Alagoas", "sigla" : "AL", "regiao" : "Nordeste", "populacao" : 3322000 }
+
+
+db.estados.find()
+{ "_id" : ObjectId("5d5d39a50dbb9e7d08804c7c"), "nome" : "Acre", "sigla" : "AC", "regiao" : "Norte" }
+{ "_id" : ObjectId("5d5d39ee0dbb9e7d08804c7d"), "nome" : "Alagoas", "sigla" : "AL", "regiao" : "Nordeste", "populacao" : 3322000 }
+{ "_id" : ObjectId("5d5d3aaa0dbb9e7d08804c7e"), "nome" : "Rio de Janeiro", "sigla" : "RJ", "regiao" : "Sudeste", "cidades" : [ { "nome" : "Niterói", "area" : 133.9, "populacao" : 487562 } ] }
+{ "_id" : ObjectId("5d5d3d800dbb9e7d08804c82"), "nome" : "São Paulo", "sigla" : "SP", "regiao" : "Sudeste", "cidades" : [ { "_id" : ObjectId("5d5d3d800dbb9e7d08804c7f"), "nome" : "Campinas", "area" : 795.7, "prefeito" : "Jonas Donizete", "populacao" : 1081000 }, { "_id" : ObjectId("5d5d3d800dbb9e7d08804c80"), "nome" : "Guarulhos", "populacao" : 1325000 }, { "_id" : ObjectId("5d5d3d800dbb9e7d08804c81"), "nome" : "Sorocaba", "distanciaCapital" : 87, "populacao" : 644919 } ] }
+
+db.estados.find().skip(1).limit(2)
+{ "_id" : ObjectId("5d5d39ee0dbb9e7d08804c7d"), "nome" : "Alagoas", "sigla" : "AL", "regiao" : "Nordeste", "populacao" : 3322000 }
+{ "_id" : ObjectId("5d5d3aaa0dbb9e7d08804c7e"), "nome" : "Rio de Janeiro", "sigla" : "RJ", "regiao" : "Sudeste", "cidades" : [ { "nome" : "Niterói", "area" : 133.9, "populacao" : 487562 } ] }
+
+db.estados.count()
+4
+
+
+db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1})
+{ "_id" : ObjectId("5d5d3d800dbb9e7d08804c82"), "nome" : "São Paulo", "sigla" : "SP" }
+
+
+db.estados.find({sigla: "SP"}, {nome: 1, sigla: 1, _id: 0})
+{ "nome" : "São Paulo", "sigla" : "SP" }
+
+
+db.estados.find({sigla: "SP"}, {"cidades.nome": 1, _id: 0})
+{ "cidades" : [ { "nome" : "Campinas" }, { "nome" : "Guarulhos" }, { "nome" : "Sorocaba" } ] }
