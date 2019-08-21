@@ -23,6 +23,6 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 20. React
 - [x] 23. VueJS
 - [x] 27. Banco de Dados - Relacional
-- [ ] 28. Banco de Dados - Não Relacional
+- [x] 28. Banco de Dados - Não Relacional
 - [ ] 29. Express
 - [ ] 32. Conclusão
