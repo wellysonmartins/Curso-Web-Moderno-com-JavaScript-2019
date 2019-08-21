@@ -24,5 +24,7 @@ Arquivos do curso - Javascript React Vue JS Node HTML CSS jQuery Bootstrap 4 Web
 - [x] 23. VueJS
 - [x] 27. Banco de Dados - Relacional
 - [x] 28. Banco de Dados - Não Relacional
-- [ ] 29. Express
-- [ ] 32. Conclusão
+- [x] 29. Express
+- [ ] 30. Projeto Base de Conhecimento - BACKEND
+- [ ] 31. Projeto Base de Conhecimento - FRONTEND
+- [ ] 32. Publicando uma Aplicação VueJS na Amazon
