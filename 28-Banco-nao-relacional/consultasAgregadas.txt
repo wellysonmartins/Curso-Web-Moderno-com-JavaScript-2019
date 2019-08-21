@@ -1,0 +1,24 @@
+db.estados.aggregate([
+   { $project: { nome: 1, "cidades.nome": 1, _id: 0 } }
+])
+{ "nome" : "Acre" }
+{ "nome" : "Alagoas" }
+{ "nome" : "Rio de Janeiro", "cidades" : [ { "nome" : "Niterói" } ] }
+{ "nome" : "São Paulo", "cidades" : [ { "nome" : "Campinas" }, { "nome" : "Guarulhos" }, { "nome" : "Sorocaba" } ] }
+
+
+db.estados.aggregate([
+   { $project: { populacao: { $sum: "$cidades.populacao" }, sigla: 1, _id: 0 } }
+])
+{ "sigla" : "AC", "populacao" : 0 }
+{ "sigla" : "AL", "populacao" : 0 }
+{ "sigla" : "RJ", "populacao" : 487562 }
+{ "sigla" : "SP", "populacao" : 3050919 }
+
+
+db.estados.aggregate([
+   { $project: { populacao: { $sum: "$cidades.populacao" }, sigla: 1, _id: 0 } },
+   { $group: { _id: null, populacaoTotal: { $sum: "$populacao" } } },
+   { $project: { _id: 0, populacaoTotal: 1 } }
+])
+{ "populacaoTotal" : 3538481 }
