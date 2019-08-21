@@ -1,0 +1,48 @@
+db.estados.aggregate([
+   {$match: {"cidades.nome": "Sorocaba"}},
+   {$unwind: "$cidades"},
+]).pretty()
+{
+	"_id" : ObjectId("5d5d3d800dbb9e7d08804c82"),
+	"nome" : "São Paulo",
+	"sigla" : "SP",
+	"regiao" : "Sudeste",
+	"cidades" : {
+		"_id" : ObjectId("5d5d3d800dbb9e7d08804c7f"),
+		"nome" : "Campinas",
+		"area" : 795.7,
+		"prefeito" : "Jonas Donizete",
+		"populacao" : 1081000
+	}
+}
+{
+	"_id" : ObjectId("5d5d3d800dbb9e7d08804c82"),
+	"nome" : "São Paulo",
+	"sigla" : "SP",
+	"regiao" : "Sudeste",
+	"cidades" : {
+		"_id" : ObjectId("5d5d3d800dbb9e7d08804c80"),
+		"nome" : "Guarulhos",
+		"populacao" : 1325000
+	}
+}
+{
+	"_id" : ObjectId("5d5d3d800dbb9e7d08804c82"),
+	"nome" : "São Paulo",
+	"sigla" : "SP",
+	"regiao" : "Sudeste",
+	"cidades" : {
+		"_id" : ObjectId("5d5d3d800dbb9e7d08804c81"),
+		"nome" : "Sorocaba",
+		"distanciaCapital" : 87,
+		"populacao" : 644919
+	}
+}
+
+db.estados.aggregate([
+   {$match: {"cidades.nome": "Sorocaba"}},
+   {$unwind: "$cidades"},
+   {$match: {"cidades.nome": "Sorocaba"}},
+   {$project: {_id: "$cidades._id"}}
+]).pretty()
+{ "_id" : ObjectId("5d5d3d800dbb9e7d08804c81") }
